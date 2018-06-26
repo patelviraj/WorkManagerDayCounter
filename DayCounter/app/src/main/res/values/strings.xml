@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Day Counter</string>
+    <string name="loading">Loading...</string>
+    <string name="today">Today</string>
+
+    <string name="day_">Day %s</string>
+    <string name="title">Title</string>
+</resources>

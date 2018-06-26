@@ -1,0 +1,33 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:splitMotionEvents">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="toolbarTheme" parent="Theme.AppCompat.Light">
+        <item name="colorButtonNormal">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/white</item>
+    </style>
+
+
+    <style name="ProgressDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:backgroundDimAmount">0.2</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="ProgressBarColor">
+        <item name="colorAccent">@color/white</item>
+    </style>
+</resources>

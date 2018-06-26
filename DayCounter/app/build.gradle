@@ -1,0 +1,75 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.daycounter"
+        minSdkVersion 16
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+}
+
+ext {
+    androiSupportVersion = "27.1.1"
+    archRoomVersion = "1.1.1"
+    intuitDimenVersion = "1.0.4"
+    workVersion = "1.0.0-alpha03"
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    // Support Libraries
+    implementation "com.android.support:design:$androiSupportVersion"
+    implementation "com.android.support:support-v4:$androiSupportVersion"
+    implementation "com.android.support:cardview-v7:$androiSupportVersion"
+    implementation "com.android.support:appcompat-v7:$androiSupportVersion"
+    implementation "com.android.support:recyclerview-v7:$androiSupportVersion"
+    implementation "com.android.support:customtabs:$androiSupportVersion"
+
+    //Dimen Library
+    implementation "com.intuit.sdp:sdp-android:$intuitDimenVersion"
+    implementation "com.intuit.ssp:ssp-android:$intuitDimenVersion"
+
+    implementation 'com.google.code.gson:gson:2.8.2'
+
+    //Room Support
+    implementation "android.arch.persistence.room:runtime:$archRoomVersion"
+    annotationProcessor "android.arch.persistence.room:compiler:$archRoomVersion"
+
+    // LiveData Support
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+    annotationProcessor "android.arch.lifecycle:compiler:1.1.1"
+
+    // WorkManager for background service
+    implementation "android.arch.work:work-runtime:$workVersion"
+    // optional - Firebase JobDispatcher support
+    implementation "android.arch.work:work-firebase:$workVersion"
+}

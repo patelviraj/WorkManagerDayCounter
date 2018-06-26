@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_4sdp"
+        android:paddingEnd="@dimen/_8sdp"
+        android:paddingLeft="@dimen/_8sdp"
+        android:paddingRight="@dimen/_8sdp"
+        android:paddingStart="@dimen/_8sdp"
+        android:paddingTop="@dimen/_4sdp">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="@dimen/_4sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivItemImage"
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:background="@color/gray_bg"
+                    android:contentDescription="@string/app_name"
+                    android:paddingEnd="@dimen/_4sdp"
+                    android:paddingLeft="@dimen/_4sdp"
+                    android:paddingRight="@dimen/_4sdp"
+                    android:paddingStart="@dimen/_4sdp"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:orientation="vertical"
+                    android:paddingEnd="@dimen/_6sdp"
+                    android:paddingLeft="@dimen/_6sdp"
+                    android:paddingRight="@dimen/_6sdp"
+                    android:paddingStart="@dimen/_6sdp">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvDayTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:background="@color/Teal"
+                            android:gravity="start"
+                            android:paddingBottom="@dimen/_1sdp"
+                            android:paddingEnd="@dimen/_6sdp"
+                            android:paddingLeft="@dimen/_6sdp"
+                            android:paddingRight="@dimen/_6sdp"
+                            android:paddingStart="@dimen/_6sdp"
+                            android:paddingTop="@dimen/_1sdp"
+                            android:text="@string/today"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/tvDayIndicator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:background="@color/CherryBlossom"
+                            android:gravity="center"
+                            android:minWidth="@dimen/_46sdp"
+                            android:paddingBottom="@dimen/_1sdp"
+                            android:paddingEnd="@dimen/_6sdp"
+                            android:paddingLeft="@dimen/_6sdp"
+                            android:paddingRight="@dimen/_6sdp"
+                            android:paddingStart="@dimen/_6sdp"
+                            android:paddingTop="@dimen/_1sdp"
+                            android:text="@string/day_"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10sdp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:maxLines="2"
+                        android:paddingBottom="@dimen/_6sdp"
+                        android:paddingTop="@dimen/_6sdp"
+                        android:text="@string/title"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+</layout>
